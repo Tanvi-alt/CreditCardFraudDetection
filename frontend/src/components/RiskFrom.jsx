@@ -30,7 +30,7 @@ const RiskForm = () => {
       (k) => (payload[k] = (values[k] - 50) / 50)
     );
 
-    const res = await fetch("http://localhost:5000/api/predict", {
+    const res = await fetch("https://creditcardfrauddetection-backend.onrender.com/api/predict", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(payload),
